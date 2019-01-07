@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4280426FA2E9BB5BD5C42DDD /* HelloContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D3B76E3D30B0CC8DCD32F4 /* HelloContract.swift */; };
 		8AFBE14B50CA38EE30F9F846 /* Pods_TezosContracts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F0E7B928D27E3854767633 /* Pods_TezosContracts.framework */; };
+		96C385CFD8F0F9442D40EBAB /* SharedContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D284D0A1623DDB15C913573 /* SharedContract.swift */; };
+		F8692D1B21E38C4A00C32B3F /* contract_abi.json in Resources */ = {isa = PBXBuildFile; fileRef = F8692D1A21E38C4A00C32B3F /* contract_abi.json */; };
 		F8ADF53A21C78CEC00B75212 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ADF53921C78CEC00B75212 /* AppDelegate.swift */; };
 		F8ADF53C21C78CEC00B75212 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ADF53B21C78CEC00B75212 /* ViewController.swift */; };
 		F8ADF53F21C78CEC00B75212 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8ADF53D21C78CEC00B75212 /* Main.storyboard */; };
@@ -18,7 +21,10 @@
 /* Begin PBXFileReference section */
 		42D66453E546D36DB22F2BD7 /* Pods-TezosContracts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TezosContracts.debug.xcconfig"; path = "Target Support Files/Pods-TezosContracts/Pods-TezosContracts.debug.xcconfig"; sourceTree = "<group>"; };
 		482A28FF9E9BBA787EFB291E /* Pods-TezosContracts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TezosContracts.release.xcconfig"; path = "Target Support Files/Pods-TezosContracts/Pods-TezosContracts.release.xcconfig"; sourceTree = "<group>"; };
+		72D3B76E3D30B0CC8DCD32F4 /* HelloContract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HelloContract.swift; path = GeneraredContracts/HelloContract.swift; sourceTree = "<group>"; };
 		88F0E7B928D27E3854767633 /* Pods_TezosContracts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TezosContracts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D284D0A1623DDB15C913573 /* SharedContract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SharedContract.swift; path = GeneraredContracts/SharedContract.swift; sourceTree = "<group>"; };
+		F8692D1A21E38C4A00C32B3F /* contract_abi.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = contract_abi.json; sourceTree = "<group>"; };
 		F8ADF53621C78CEC00B75212 /* TezosContracts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TezosContracts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8ADF53921C78CEC00B75212 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8ADF53B21C78CEC00B75212 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,13 +54,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C775CC6A5858ACA48E075CF9 /* GeneraredContracts */ = {
+			isa = PBXGroup;
+			children = (
+				72D3B76E3D30B0CC8DCD32F4 /* HelloContract.swift */,
+				8D284D0A1623DDB15C913573 /* SharedContract.swift */,
+			);
+			name = GeneraredContracts;
+			sourceTree = "<group>";
+		};
 		D13CA79EE444B3AED92D5E8F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				42D66453E546D36DB22F2BD7 /* Pods-TezosContracts.debug.xcconfig */,
 				482A28FF9E9BBA787EFB291E /* Pods-TezosContracts.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,10 +95,12 @@
 			children = (
 				F8ADF53921C78CEC00B75212 /* AppDelegate.swift */,
 				F8ADF53B21C78CEC00B75212 /* ViewController.swift */,
+				F8692D1A21E38C4A00C32B3F /* contract_abi.json */,
 				F8ADF53D21C78CEC00B75212 /* Main.storyboard */,
 				F8ADF54021C78CF000B75212 /* Assets.xcassets */,
 				F8ADF54221C78CF000B75212 /* LaunchScreen.storyboard */,
 				F8ADF54521C78CF000B75212 /* Info.plist */,
+				C775CC6A5858ACA48E075CF9 /* GeneraredContracts */,
 			);
 			path = TezosContracts;
 			sourceTree = "<group>";
@@ -151,6 +167,7 @@
 			files = (
 				F8ADF54421C78CF000B75212 /* LaunchScreen.storyboard in Resources */,
 				F8ADF54121C78CF000B75212 /* Assets.xcassets in Resources */,
+				F8692D1B21E38C4A00C32B3F /* contract_abi.json in Resources */,
 				F8ADF53F21C78CEC00B75212 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +240,8 @@
 			files = (
 				F8ADF53C21C78CEC00B75212 /* ViewController.swift in Sources */,
 				F8ADF53A21C78CEC00B75212 /* AppDelegate.swift in Sources */,
+				4280426FA2E9BB5BD5C42DDD /* HelloContract.swift in Sources */,
+				96C385CFD8F0F9442D40EBAB /* SharedContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

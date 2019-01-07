@@ -36,6 +36,24 @@ class ViewController: UIViewController {
                 print("Sending Tezos failed with error: \(error)")
             }
         })
+
+        tezosClient.helloContract(at: "KT1DwASQY1uTEkzWUShbeQJfKpBdb2ugsE5k").call(param1: [1, 2, 3]).send(from: wallet, amount: Tez.zero, completion: { result in
+            switch result {
+            case .failure(let error):
+                print("Call failed with error: \(error)")
+            case .success(let operationHash):
+                print("Call succeeded with \(operationHash)")
+            }
+        })
+
+        tezosClient.helloContract(at: "KT1DwASQY1uTEkzWUShbeQJfKpBdb2ugsE5k").status { result in
+            switch result {
+            case .failure(let error):
+                print("Call failed with error: \(error)")
+            case .success(let status):
+                print("The contract's storage is: \(status.storage)")
+            }
+        }
     }
 
 
