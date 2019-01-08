@@ -1,22 +1,22 @@
 PODS:
   - BigInt (3.1.0):
     - SipHash (~> 1.2)
-  - CryptoSwift (0.7.2)
-  - MnemonicKit (1.2.0):
-    - CryptoSwift (= 0.7.2)
-  - Result (4.0.0)
+  - CryptoSwift (0.13.1)
+  - MnemonicKit (1.3.0):
+    - CryptoSwift (~> 0.13.1)
+  - Result (4.0.1)
   - SipHash (1.2.2)
   - Sodium (0.7.0)
-  - TezosGen (0.2):
-    - TezosSwift
-  - TezosSwift (0.1):
+  - TezosGen (1.0.3):
+    - TezosSwift (~> 1.0)
+  - TezosSwift (1.0):
     - BigInt (~> 3.1)
-    - MnemonicKit (~> 1.2.0)
+    - MnemonicKit (~> 1.3.0)
     - Result (~> 4.0.0)
     - Sodium (~> 0.7.0)
 
 DEPENDENCIES:
-  - TezosGen
+  - TezosGen (~> 1.0.3)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -31,14 +31,14 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   BigInt: 76b5dfdfa3e2e478d4ffdf161aeede5502e2742f
-  CryptoSwift: cd2158be2bf639aabc63ec804707c7137c90157c
-  MnemonicKit: 9d1d037ba51545db3c1cade164b087c32e9af659
-  Result: 7645bb3f50c2ce726dd0ff2fa7b6f42bbe6c3713
+  CryptoSwift: ff68c35a53e03177d31aaa2c1e8b3e010aeed6cb
+  MnemonicKit: 4f55831a04bc4a24e67b959c715338a529e8acb5
+  Result: a6e784bebf48b471d59cddc1adb81f41f678c487
   SipHash: fad90a4683e420c52ef28063063dbbce248ea6d4
   Sodium: c5510cc6f5e1b27858e5f260b5cac80d4a3f9379
-  TezosGen: ef28ebbd807442c8203c16d12e894c8e4fc6d417
-  TezosSwift: 20119e6e44ac2ce2a02eeae294c7ad3963d09932
+  TezosGen: a82f6072d0f5b4840a5bff7b30e5572f82a2e012
+  TezosSwift: 34354847130f242e1020a2a45a7f8264b80dfc99
 
-PODFILE CHECKSUM: 248ab54b1cd7d8f83d09281b7eaa0fc0f4196c90
+PODFILE CHECKSUM: 3d0fb88da9abe6cec74b3b6863e12c5fd3d04d7d
 
 COCOAPODS: 1.6.0.beta.2
