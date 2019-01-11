@@ -28,14 +28,15 @@ class ViewController: UIViewController {
         let mnemonic = "soccer click number muscle police corn couch bitter gorilla camp camera shove expire pill praise"
         let wallet = Wallet(mnemonic: mnemonic)!
 
-        tezosClient.send(amount: Tez(1), to: "tz1WRFiK6eGNvP3ioWkWeP6JwDaQjj95opnQ", from: wallet, completion: { result in
-            switch result {
-            case .success(let transactionHash):
-                print(transactionHash)
-            case .failure(let error):
-                print("Sending Tezos failed with error: \(error)")
-            }
-        })
+        // Would conflict with calling hello contract, to do this, call this after it is completed or send these operations batched
+//        tezosClient.send(amount: Tez(1), to: "tz1WRFiK6eGNvP3ioWkWeP6JwDaQjj95opnQ", from: wallet, completion: { result in
+//            switch result {
+//            case .success(let transactionHash):
+//                print(transactionHash)
+//            case .failure(let error):
+//                print("Sending Tezos failed with error: \(error)")
+//            }
+//        })
 
         tezosClient.helloContract(at: "KT1DwASQY1uTEkzWUShbeQJfKpBdb2ugsE5k").call(param1: [1, 2, 3]).send(from: wallet, amount: Tez.zero, completion: { result in
             switch result {
